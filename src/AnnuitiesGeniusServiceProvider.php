@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace AgathaGlobalTech\AnnuitiesGenius;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use AgathaGlobalTech\AnnuitiesGenius\Commands\AnnuitiesGeniusCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class AnnuitiesGeniusServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('ag-laravel-sdk')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_ag-laravel-sdk_table')
+            ->hasCommand(AnnuitiesGeniusCommand::class);
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace AgathaGlobalTech\AnnuitiesGenius\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class AnnuitiesGeniusCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'ag-laravel-sdk';
 
     public $description = 'My command';
 
