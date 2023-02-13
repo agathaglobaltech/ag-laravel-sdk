@@ -2,9 +2,9 @@
 
 namespace AgathaGlobalTech\AnnuitiesGenius;
 
+use AgathaGlobalTech\AnnuitiesGenius\Commands\AnnuitiesGeniusCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use AgathaGlobalTech\AnnuitiesGenius\Commands\AnnuitiesGeniusCommand;
 
 class AnnuitiesGeniusServiceProvider extends PackageServiceProvider
 {
