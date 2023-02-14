@@ -2,9 +2,9 @@
 
 namespace AgathaGlobalTech\AnnuitiesGenius;
 
+use AgathaGlobalTech\AnnuitiesGenius\Contracts\AnnuitiesGeniusApi;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use AgathaGlobalTech\AnnuitiesGenius\Commands\AnnuitiesGeniusCommand;
 
 class AnnuitiesGeniusServiceProvider extends PackageServiceProvider
 {
@@ -17,9 +17,26 @@ class AnnuitiesGeniusServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('ag-laravel-sdk')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_ag-laravel-sdk_table')
-            ->hasCommand(AnnuitiesGeniusCommand::class);
+            ->hasConfigFile('annuitiesgenius');
+    }
+
+    public function packageRegistered()
+    {
+        $this->app->when(AnnuitiesGeniusGeniusCached::class)
+            ->needs('$cacheForHours')
+            ->give(config('annuitiesgenius.cache.hours'));
+
+        $this->app->bind(AnnuitiesGenius::class, fn () => new AnnuitiesGenius(
+            config('annuitiesgenius.base_url'),
+            config('annuitiesgenius.token'),
+        ));
+
+        $this->app->bind(AnnuitiesGeniusApi::class, function () {
+            if (config('annuitiesgenius.cache.enabled')) {
+                return $this->app->make(AnnuitiesGeniusGeniusCached::class);
+            }
+
+            return $this->app->make(AnnuitiesGenius::class);
+        });
     }
 }

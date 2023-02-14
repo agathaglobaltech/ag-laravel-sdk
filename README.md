@@ -5,15 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/agathaglobaltech/ag-laravel-sdk/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/agathaglobaltech/ag-laravel-sdk/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/agathaglobaltech/ag-laravel-sdk.svg?style=flat-square)](https://packagist.org/packages/agathaglobaltech/ag-laravel-sdk)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/ag-laravel-sdk.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/ag-laravel-sdk)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+This is a Laravel API wrapper for Annuities Genius. It provides a simple way to interact with the Annuities Genius API.
 
 ## Installation
 
@@ -21,13 +13,6 @@ You can install the package via composer:
 
 ```bash
 composer require agathaglobaltech/ag-laravel-sdk
-```
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="ag-laravel-sdk-migrations"
-php artisan migrate
 ```
 
 You can publish the config file with:
@@ -40,20 +25,15 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'token' => env('ANNUITIES_GENIUS_TOKEN'),
+
+    'base_url' => env('ANNUITIES_GENIUS_BASE_URL', 'https://app.annuitiesgenius.com/api'),
+
+    'cache' => [
+        'enabled' => env('ANNUITIES_GENIUS_CACHE_ENABLED', false),
+        'hours' => 24,
+    ],
 ];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="ag-laravel-sdk-views"
-```
-
-## Usage
-
-```php
-$annuitiesGenius = new AgathaGlobalTech\AnnuitiesGenius();
-echo $annuitiesGenius->echoPhrase('Hello, AgathaGlobalTech!');
 ```
 
 ## Testing
@@ -65,19 +45,6 @@ composer test
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
-## Credits
-
-- [Oleg Makedonsky](https://github.com/agathaglobaltech)
-- [All Contributors](../../contributors)
 
 ## License
 

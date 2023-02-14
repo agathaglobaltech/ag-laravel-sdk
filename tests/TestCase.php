@@ -1,10 +1,10 @@
 <?php
 
-namespace AgathaGlobalTech\AnnuitiesGenius\Tests;
+namespace AgathaGlobalTech\AnnuitiesGenius\AnnuitiesGenius\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use AgathaGlobalTech\AnnuitiesGenius\AnnuitiesGeniusServiceProvider;
+use AgathaGlobalTech\AnnuitiesGenius\AnnuitiesGenius\AnnuitiesGeniusServiceProvider;
 
 class TestCase extends Orchestra
 {

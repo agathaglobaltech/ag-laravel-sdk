@@ -2,15 +2,16 @@
 
 namespace AgathaGlobalTech\AnnuitiesGenius\Facades;
 
+use AgathaGlobalTech\AnnuitiesGenius\Contracts\AnnuitiesGeniusApi;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \AgathaGlobalTech\AnnuitiesGenius\AnnuitiesGenius
+ * @see \AgathaGlobalTech\AnnuitiesGenius\Contracts\AnnuitiesGeniusApi
  */
 class AnnuitiesGenius extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \AgathaGlobalTech\AnnuitiesGenius\AnnuitiesGenius::class;
+        return AnnuitiesGeniusApi::class;
     }
 }
