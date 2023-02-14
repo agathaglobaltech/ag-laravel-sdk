@@ -2,9 +2,9 @@
 
 namespace AgathaGlobalTech\AnnuitiesGenius\AnnuitiesGenius\Tests;
 
+use AgathaGlobalTech\AnnuitiesGenius\AnnuitiesGeniusServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use AgathaGlobalTech\AnnuitiesGenius\AnnuitiesGenius\AnnuitiesGeniusServiceProvider;
 
 class TestCase extends Orchestra
 {
