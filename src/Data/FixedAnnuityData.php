@@ -2,14 +2,12 @@
 
 namespace AgathaGlobalTech\AnnuitiesGenius\Data;
 
-use AgathaGlobalTech\AnnuitiesGenius\Data\AnnuityInfo;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
 final class FixedAnnuityData
 {
     /**
-     * @var  \Illuminate\Support\Collection<int, FixedInterestData> $interests
+     * @var  \Illuminate\Support\Collection<int, FixedInterestData>
      */
     public Collection $interests;
 

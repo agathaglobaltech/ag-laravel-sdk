@@ -4,6 +4,7 @@ namespace AgathaGlobalTech\AnnuitiesGenius;
 
 use AgathaGlobalTech\AnnuitiesGenius\Contracts\AnnuitiesGeniusApi;
 use AgathaGlobalTech\AnnuitiesGenius\Contracts\CacheableParams;
+use AgathaGlobalTech\AnnuitiesGenius\Enums\AnnuityType;
 use AgathaGlobalTech\AnnuitiesGenius\Params\AccumulationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\DeathBenefitRiderCalculationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\FixedAnnuitiesParams;
@@ -11,7 +12,6 @@ use AgathaGlobalTech\AnnuitiesGenius\Params\IncomeRiderCalculationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\IndexedAnnuitiesParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\MultiYearGuaranteedAnnuitiesCalculationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\Params;
-use AgathaGlobalTech\AnnuitiesGenius\Enums\AnnuityType;
 use Illuminate\Support\Collection;
 
 class AnnuitiesGeniusGeniusCached implements AnnuitiesGeniusApi

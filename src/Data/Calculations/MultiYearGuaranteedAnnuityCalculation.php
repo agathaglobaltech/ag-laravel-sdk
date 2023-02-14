@@ -14,8 +14,7 @@ class MultiYearGuaranteedAnnuityCalculation
         public readonly FixedAnnuityData $annuity,
         public readonly FixedInterestData $interest,
         public readonly CarrierData $carrier,
-    )
-    {
+    ) {
     }
 
     public static function fake(): self

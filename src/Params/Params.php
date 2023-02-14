@@ -4,7 +4,6 @@ namespace AgathaGlobalTech\AnnuitiesGenius\Params;
 
 use AgathaGlobalTech\AnnuitiesGenius\Concerns\WithUniqueKey;
 use AgathaGlobalTech\AnnuitiesGenius\Contracts\CacheableParams;
-use Illuminate\Contracts\Support\Arrayable;
 
 class Params implements CacheableParams
 {

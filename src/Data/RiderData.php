@@ -31,7 +31,7 @@ class RiderData
             rollupRate: $incomingRiderData['rollup_rate'],
             rollupPeriod: $incomingRiderData['rollup_period'] ?? '',
             fee: $incomingRiderData['fee'],
-            isInbuilt: !$incomingRiderData['optional'],
+            isInbuilt: ! $incomingRiderData['optional'],
             benefitBaseBonus: $incomingRiderData['bonus'] ?? 0,
             deferYears: $incomingRiderData['wait_period'] ?? 0,
             interestMultiplier: $incomingRiderData['interest_multiplier'] ?? null,
