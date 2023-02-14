@@ -1,5 +1,5 @@
 <?php
 
-use AgathaGlobalTech\AnnuitiesGenius\AnnuitiesGenius\Tests\TestCase;
+use AgathaGlobalTech\AnnuitiesGenius\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

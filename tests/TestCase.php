@@ -1,6 +1,6 @@
 <?php
 
-namespace AgathaGlobalTech\AnnuitiesGenius\AnnuitiesGenius\Tests;
+namespace AgathaGlobalTech\AnnuitiesGenius\Tests;
 
 use AgathaGlobalTech\AnnuitiesGenius\AnnuitiesGeniusServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;

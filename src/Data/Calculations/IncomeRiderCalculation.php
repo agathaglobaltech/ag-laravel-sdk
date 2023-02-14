@@ -17,7 +17,7 @@ class IncomeRiderCalculation
     ) {
     }
 
-    public static function fake(): static
+    public static function fake(): self
     {
         return new self(
             income: Income::fake(),

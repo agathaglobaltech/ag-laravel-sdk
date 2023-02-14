@@ -2,7 +2,7 @@
 
 namespace AgathaGlobalTech\AnnuitiesGenius\Data;
 
-class FixedInterestData
+final class FixedInterestData
 {
     public function __construct(
         public readonly int $id,

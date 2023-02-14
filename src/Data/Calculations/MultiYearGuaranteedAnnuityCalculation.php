@@ -18,7 +18,7 @@ class MultiYearGuaranteedAnnuityCalculation
     {
     }
 
-    public static function fake(): static
+    public static function fake(): self
     {
         return new self(
             revenue: Revenue::fake(),

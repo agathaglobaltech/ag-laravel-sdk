@@ -6,7 +6,7 @@ use AgathaGlobalTech\AnnuitiesGenius\Data\AnnuityInfo;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
-class FixedAnnuityData
+final class FixedAnnuityData
 {
     /**
      * @var  \Illuminate\Support\Collection<int, FixedInterestData> $interests

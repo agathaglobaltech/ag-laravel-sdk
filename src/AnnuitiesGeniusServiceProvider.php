@@ -31,12 +31,11 @@ class AnnuitiesGeniusServiceProvider extends PackageServiceProvider
             config('annuitiesgenius.token'),
         ));
 
-        $this->app->bind(AnnuitiesGeniusApi::class, function () {
-            if (config('annuitiesgenius.cache.enabled')) {
-                return $this->app->make(AnnuitiesGeniusGeniusCached::class);
-            }
-
-            return $this->app->make(AnnuitiesGenius::class);
-        });
+        $this->app->bind(
+            AnnuitiesGeniusApi::class,
+            config('annuitiesgenius.cache.enabled')
+                ? AnnuitiesGeniusGeniusCached::class
+                : AnnuitiesGenius::class
+        );
     }
 }

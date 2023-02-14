@@ -11,7 +11,7 @@ class Params implements CacheableParams
     use WithUniqueKey;
 
     public function __construct(
-        private readonly array $params
+        protected readonly array $params
     ) {
     }
 }

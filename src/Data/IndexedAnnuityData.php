@@ -5,7 +5,7 @@ namespace AgathaGlobalTech\AnnuitiesGenius\Data;
 use AgathaGlobalTech\AnnuitiesGenius\FakeFactory;
 use Illuminate\Support\Arr;
 
-class IndexedAnnuityData
+final class IndexedAnnuityData
 {
     public function __construct(
         public readonly AnnuityInfo $annuityInfo,

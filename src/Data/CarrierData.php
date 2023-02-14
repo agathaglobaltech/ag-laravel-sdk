@@ -4,7 +4,7 @@ namespace AgathaGlobalTech\AnnuitiesGenius\Data;
 
 use Illuminate\Support\Arr;
 
-class CarrierData
+final class CarrierData
 {
     public function __construct(
         public readonly int $id,
