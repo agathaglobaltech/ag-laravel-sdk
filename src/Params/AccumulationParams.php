@@ -14,6 +14,7 @@ class AccumulationParams implements CacheableParams, Arrayable
         public readonly int $premium,
         public readonly int $age,
         public readonly string $state,
+        public readonly bool $topPerCarrier = true,
     ) {
     }
 
@@ -28,7 +29,7 @@ class AccumulationParams implements CacheableParams, Arrayable
             'actual_index_age' => 10,
             'max_participation_rate' => 1,
             'no_fee' => 1,
-            'top_per_carrier' => 1,
+            'top_per_carrier' => $this->topPerCarrier ? 1 : 0,
         ];
     }
 }

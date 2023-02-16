@@ -17,6 +17,7 @@ class DeathBenefitRiderCalculationParams implements CacheableParams
         private readonly string $state,
         private readonly DeathBenefitType $deathBenefitType,
         private readonly ?int $limit = null,
+        private readonly string $levelOfDetail = 'top-for-carrier',
     ) {
     }
 
@@ -29,7 +30,7 @@ class DeathBenefitRiderCalculationParams implements CacheableParams
             'state' => $this->state,
             'death_benefit_type_id' => $this->deathBenefitType->value,
             'limit' => $this->limit,
-            'level_of_detail' => 'top-for-carrier',
+            'level_of_detail' => $this->levelOfDetail,
         ];
     }
 }
