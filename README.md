@@ -18,7 +18,7 @@ composer require agathaglobaltech/ag-laravel-sdk
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="ag-laravel-sdk-config"
+php artisan vendor:publish --tag="sdk-config"
 ```
 
 This is the contents of the published config file:
