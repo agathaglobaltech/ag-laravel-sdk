@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.4 - 2023-03-17
+
+Added /me support
+
 ## v0.0.3 - 2023-02-18
 
 Add Laravel 10 support
