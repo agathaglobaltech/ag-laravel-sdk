@@ -17,6 +17,7 @@ use AgathaGlobalTech\AnnuitiesGenius\Data\Income;
 use AgathaGlobalTech\AnnuitiesGenius\Data\IndexedAnnuityData;
 use AgathaGlobalTech\AnnuitiesGenius\Data\Revenue;
 use AgathaGlobalTech\AnnuitiesGenius\Data\RiderData;
+use AgathaGlobalTech\AnnuitiesGenius\Data\UserInfo;
 use AgathaGlobalTech\AnnuitiesGenius\Enums\AnnuityType;
 use AgathaGlobalTech\AnnuitiesGenius\Params\AccumulationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\DeathBenefitRiderCalculationParams;
@@ -41,6 +42,20 @@ class AnnuitiesGenius implements AnnuitiesGeniusApi
             'Authorization' => "Bearer {$this->token}",
             'Accept' => 'application/json',
         ]);
+    }
+
+    public function me(): UserInfo
+    {
+        $me = $this
+            ->client()
+            ->post('me')
+            ->throw()
+            ->object();
+
+        return new UserInfo(
+            name: $me->name,
+            email: $me->email,
+        );
     }
 
     public function calculateIncomeRiders(IncomeRiderCalculationParams $params): Collection

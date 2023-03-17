@@ -2,6 +2,7 @@
 
 namespace AgathaGlobalTech\AnnuitiesGenius\Contracts;
 
+use AgathaGlobalTech\AnnuitiesGenius\Data\UserInfo;
 use AgathaGlobalTech\AnnuitiesGenius\Enums\AnnuityType;
 use AgathaGlobalTech\AnnuitiesGenius\Params\AccumulationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\DeathBenefitRiderCalculationParams;
@@ -13,6 +14,8 @@ use Illuminate\Support\Collection;
 
 interface AnnuitiesGeniusApi
 {
+    public function me(): UserInfo;
+
     /**
      * @returns Collection<\AgathaGlobalTech\AnnuitiesGenius\Data\Calculations\IncomeRiderCalculation, int>
      */
