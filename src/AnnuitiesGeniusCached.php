@@ -4,6 +4,7 @@ namespace AgathaGlobalTech\AnnuitiesGenius;
 
 use AgathaGlobalTech\AnnuitiesGenius\Contracts\AnnuitiesGeniusApi;
 use AgathaGlobalTech\AnnuitiesGenius\Contracts\CacheableParams;
+use AgathaGlobalTech\AnnuitiesGenius\Data\UserInfo;
 use AgathaGlobalTech\AnnuitiesGenius\Enums\AnnuityType;
 use AgathaGlobalTech\AnnuitiesGenius\Params\AccumulationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\DeathBenefitRiderCalculationParams;
@@ -14,7 +15,7 @@ use AgathaGlobalTech\AnnuitiesGenius\Params\MultiYearGuaranteedAnnuitiesCalculat
 use AgathaGlobalTech\AnnuitiesGenius\Params\Params;
 use Illuminate\Support\Collection;
 
-class AnnuitiesGeniusGeniusCached implements AnnuitiesGeniusApi
+class AnnuitiesGeniusCached implements AnnuitiesGeniusApi
 {
     public function __construct(
         protected AnnuitiesGenius $annuitiesGeniusApi,
@@ -31,6 +32,11 @@ class AnnuitiesGeniusGeniusCached implements AnnuitiesGeniusApi
             ttl: now()->addHours($this->cacheForHours),
             callback: fn () => $this->annuitiesGeniusApi->{$method}(...$args)
         );
+    }
+
+    public function me(): UserInfo
+    {
+        return $this->cached(__FUNCTION__, func_get_args());
     }
 
     public function calculateIncomeRiders(IncomeRiderCalculationParams $params): Collection

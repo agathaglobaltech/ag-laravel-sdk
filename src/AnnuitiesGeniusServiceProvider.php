@@ -22,7 +22,7 @@ class AnnuitiesGeniusServiceProvider extends PackageServiceProvider
 
     public function packageRegistered()
     {
-        $this->app->when(AnnuitiesGeniusGeniusCached::class)
+        $this->app->when(AnnuitiesGeniusCached::class)
             ->needs('$cacheForHours')
             ->give(config('annuitiesgenius.cache.hours'));
 
@@ -34,7 +34,7 @@ class AnnuitiesGeniusServiceProvider extends PackageServiceProvider
         $this->app->bind(
             AnnuitiesGeniusApi::class,
             config('annuitiesgenius.cache.enabled')
-                ? AnnuitiesGeniusGeniusCached::class
+                ? AnnuitiesGeniusCached::class
                 : AnnuitiesGenius::class
         );
     }
