@@ -21,6 +21,7 @@ class IncomeRiderCalculationParams implements CacheableParams, Arrayable
         public readonly int $incomeStartAge,
         public readonly ?int $jointAge = null,
         public readonly ?int $limit = null,
+        public readonly ?int $deckId = null,
         public readonly string $strategy = 'no-decrease',
         public readonly string $levelOfDetail = 'top-for-carrier',
     ) {
@@ -40,6 +41,7 @@ class IncomeRiderCalculationParams implements CacheableParams, Arrayable
             'jointAge' => $this->jointAge,
             'strategy' => $this->strategy,
             'limit' => $this->limit,
+            'deck_id' => $this->deckId,
         ]);
     }
 
