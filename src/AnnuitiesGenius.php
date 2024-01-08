@@ -66,7 +66,7 @@ class AnnuitiesGenius implements AnnuitiesGeniusApi
             ->get('decks')
             ->throw()
             ->collect()
-            ->map(fn ($deck) => new DeckData(id: $deck->id, name: $deck->name));
+            ->map(fn ($deck) => new DeckData(id: $deck['id'], name: $deck['name']));
     }
 
     public function calculateIncomeRiders(IncomeRiderCalculationParams $params): Collection
