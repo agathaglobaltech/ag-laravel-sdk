@@ -17,6 +17,11 @@ interface AnnuitiesGeniusApi
     public function me(): UserInfo;
 
     /**
+     * @returns Collection<\AgathaGlobalTech\AnnuitiesGenius\Data\DeckData, int>
+     */
+    public function decks(): Collection;
+
+    /**
      * @returns Collection<\AgathaGlobalTech\AnnuitiesGenius\Data\Calculations\IncomeRiderCalculation, int>
      */
     public function calculateIncomeRiders(IncomeRiderCalculationParams $params): Collection;

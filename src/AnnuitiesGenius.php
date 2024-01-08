@@ -11,6 +11,7 @@ use AgathaGlobalTech\AnnuitiesGenius\Data\Calculations\IncomeRiderCalculation;
 use AgathaGlobalTech\AnnuitiesGenius\Data\Calculations\MultiYearGuaranteedAnnuityCalculation;
 use AgathaGlobalTech\AnnuitiesGenius\Data\CarrierData;
 use AgathaGlobalTech\AnnuitiesGenius\Data\DeathBenefit;
+use AgathaGlobalTech\AnnuitiesGenius\Data\DeckData;
 use AgathaGlobalTech\AnnuitiesGenius\Data\FixedAnnuityData;
 use AgathaGlobalTech\AnnuitiesGenius\Data\FixedInterestData;
 use AgathaGlobalTech\AnnuitiesGenius\Data\Income;
@@ -56,6 +57,16 @@ class AnnuitiesGenius implements AnnuitiesGeniusApi
             name: $me->name,
             email: $me->email,
         );
+    }
+
+    public function decks(): Collection
+    {
+        return $this
+            ->client()
+            ->get('decks')
+            ->throw()
+            ->collect()
+            ->map(fn ($deck) => new DeckData(id: $deck->id, name: $deck->name));
     }
 
     public function calculateIncomeRiders(IncomeRiderCalculationParams $params): Collection
