@@ -36,12 +36,12 @@ class AnnuitiesGeniusCached implements AnnuitiesGeniusApi
 
     public function me(): UserInfo
     {
-        return $this->cached(__FUNCTION__, func_get_args());
+        return $this->annuitiesGeniusApi->me();
     }
 
     public function decks(): Collection
     {
-        return $this->cached(__FUNCTION__, func_get_args());
+        return $this->annuitiesGeniusApi->decks();
     }
 
     public function calculateIncomeRiders(IncomeRiderCalculationParams $params): Collection
