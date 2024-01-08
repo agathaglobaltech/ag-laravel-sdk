@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.7 - 2024-01-08
+
+fix bug
+
 ## v0.0.6 - 2024-01-08
 
 add decks endpoint
