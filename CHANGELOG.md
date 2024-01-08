@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.5 - 2024-01-08
+
+Add deck id for guaranteed calculator
+
 ## v0.0.4 - 2023-03-17
 
 Added /me support
