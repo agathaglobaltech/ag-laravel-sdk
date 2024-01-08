@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.9 - 2024-01-08
+
+fix
+
 ## v0.0.8 - 2024-01-08
 
 fix caching issues
