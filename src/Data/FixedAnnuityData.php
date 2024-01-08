@@ -63,6 +63,6 @@ final class FixedAnnuityData
             ...$override,
         ];
 
-        return new static(...$params);
+        return new self(...$params);
     }
 }

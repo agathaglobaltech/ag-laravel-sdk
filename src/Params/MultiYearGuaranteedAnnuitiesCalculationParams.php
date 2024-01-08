@@ -6,7 +6,7 @@ use AgathaGlobalTech\AnnuitiesGenius\Concerns\WithUniqueKey;
 use AgathaGlobalTech\AnnuitiesGenius\Contracts\CacheableParams;
 use Illuminate\Contracts\Support\Arrayable;
 
-class MultiYearGuaranteedAnnuitiesCalculationParams implements CacheableParams, Arrayable
+class MultiYearGuaranteedAnnuitiesCalculationParams implements Arrayable, CacheableParams
 {
     use WithUniqueKey;
 

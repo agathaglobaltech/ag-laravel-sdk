@@ -8,7 +8,7 @@ use AgathaGlobalTech\AnnuitiesGenius\Enums\FundsType;
 use AgathaGlobalTech\AnnuitiesGenius\Enums\Gender;
 use Illuminate\Contracts\Support\Arrayable;
 
-class IncomeRiderCalculationParams implements CacheableParams, Arrayable
+class IncomeRiderCalculationParams implements Arrayable, CacheableParams
 {
     use WithUniqueKey;
 

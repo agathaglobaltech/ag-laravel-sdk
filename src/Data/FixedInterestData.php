@@ -58,6 +58,6 @@ final class FixedInterestData
             ...$override,
         ];
 
-        return new static(...$params);
+        return new self(...$params);
     }
 }

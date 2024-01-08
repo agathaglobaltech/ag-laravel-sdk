@@ -66,6 +66,6 @@ final class IndexedAnnuityData
             ...$override,
         ];
 
-        return new static(...$params);
+        return new self(...$params);
     }
 }

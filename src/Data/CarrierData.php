@@ -47,6 +47,6 @@ final class CarrierData
             ...$override,
         ];
 
-        return new static(...$params);
+        return new self(...$params);
     }
 }
