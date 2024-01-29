@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.10 - 2024-01-29
+
+Add fixed interest params
+
 ## v0.0.9 - 2024-01-08
 
 fix
