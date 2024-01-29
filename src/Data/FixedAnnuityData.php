@@ -7,7 +7,7 @@ use Illuminate\Support\Collection;
 final class FixedAnnuityData
 {
     /**
-     * @var  \Illuminate\Support\Collection<int, FixedInterestData>
+     * @var \Illuminate\Support\Collection<int, FixedInterestData>
      */
     public Collection $interests;
 
