@@ -16,6 +16,9 @@ final class FixedInterestData
         public readonly array $stepRate,
         public readonly float $guaranteedYieldToSurrender,
         public readonly float $currentYieldToSurrender,
+        public readonly array $availableStates,
+        public readonly int $minPremium,
+        public readonly int $maxPremium,
     ) {
     }
 
@@ -33,6 +36,9 @@ final class FixedInterestData
             stepRate: $incomingInterestData['actual_rate']['step_rate'] ?? [],
             guaranteedYieldToSurrender: $incomingInterestData['actual_rate']['guaranteed_yield_to_surrender'],
             currentYieldToSurrender: $incomingInterestData['actual_rate']['current_yield_to_surrender'],
+            availableStates: $incomingInterestData['available_in_states'],
+            minPremium: $incomingInterestData['min_premium'],
+            maxPremium: $incomingInterestData['max_premium'],
         );
     }
 
@@ -55,6 +61,9 @@ final class FixedInterestData
             'stepRate' => [],
             'guaranteedYieldToSurrender' => 0.035,
             'currentYieldToSurrender' => 0.025,
+            'availableStates' => ['CO', 'CA'],
+            'minPremium' => 1000,
+            'maxPremium' => 1_000_000,
             ...$override,
         ];
 
