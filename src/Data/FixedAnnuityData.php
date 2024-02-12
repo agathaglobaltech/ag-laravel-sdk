@@ -38,6 +38,7 @@ final class FixedAnnuityData
                 id: $incomingAnnuityData['id'],
                 name: $incomingAnnuityData['name'],
                 brochureUrl: $incomingAnnuityData['brochure_url'],
+                parentId: $incomingAnnuityData['parent_id'],
             ),
             typesOfFunds: $incomingAnnuityData['types_of_funds'],
             description: $incomingAnnuityData['description'] ?? '',

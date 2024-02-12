@@ -10,6 +10,7 @@ class AnnuityInfo
         public readonly int $id,
         public readonly string $name,
         public readonly ?string $brochureUrl,
+        public readonly ?int $parentId = null,
     ) {
     }
 

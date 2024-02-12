@@ -16,6 +16,7 @@ final class CarrierData
         public readonly ?string $ratingStandardAndPoors = null,
         public readonly ?string $ratingFitch = null,
         public readonly ?string $ratingMoodys = null,
+        public readonly ?string $logoBigUrl = null,
     ) {
     }
 
@@ -31,6 +32,7 @@ final class CarrierData
             ratingStandardAndPoors: $incomingCarrierData['rating_ambest_label'],
             ratingFitch: $incomingCarrierData['rating_fitch_label'],
             ratingMoodys: $incomingCarrierData['rating_moodys_label'],
+            logoBigUrl: $incomingCarrierData['logo_big_url'],
         );
     }
 
@@ -41,6 +43,7 @@ final class CarrierData
             'name' => '__CARRIER_NAME__',
             'shortName' => '__CR._NAME__',
             'logoUrl' => Arr::random([null, '/logo.png']),
+            'logoBigUrl' => Arr::random([null, '/logo.png']),
             'foundationYear' => Arr::random([null, random_int(1950, 2000)]),
             'ratingAmBest' => Arr::random([null, 'A++', 'B--', 'C']),
             'ratingStandardAndPoors' => Arr::random([null, 'A++', 'B--', 'C']),

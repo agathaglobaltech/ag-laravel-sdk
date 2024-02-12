@@ -31,6 +31,7 @@ final class IndexedAnnuityData
                 id: $incomingAnnuityData['id'],
                 name: $incomingAnnuityData['name'],
                 brochureUrl: $incomingAnnuityData['brochure_url'],
+                parentId: $incomingAnnuityData['parent_id'],
             ),
             annualFreeWithdrawal: $incomingAnnuityData['annual_free_withdrawal'],
             firstYearFreeWithdrawal: $incomingAnnuityData['first_year_free_withdrawal'],
