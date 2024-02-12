@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.12 - 2024-02-12
+
+- fix state type
+
 ## v0.0.11 - 2024-02-12
 
 - add big carrier logo
