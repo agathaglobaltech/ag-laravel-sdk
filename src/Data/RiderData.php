@@ -37,7 +37,7 @@ class RiderData
             interestMultiplier: $incomingRiderData['interest_multiplier'] ?? null,
             hasIncreasingIncome: $incomingRiderData['increasing_income'],
             hasEnhancedPayments: $incomingRiderData['enhanced_payments'],
-            unavailableInStates: $incomingRiderData['unavailable_in_states'],
+            unavailableInStates: $incomingRiderData['unavailable_in_states'] ?? [],
             description: $incomingRiderData['description'] ?? '',
         );
     }
