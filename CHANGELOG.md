@@ -2,6 +2,11 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.11 - 2024-02-12
+
+- add big carrier logo
+- add parent id
+
 ## v0.0.10 - 2024-01-29
 
 Add fixed interest params
