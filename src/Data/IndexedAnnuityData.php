@@ -73,7 +73,7 @@ final class IndexedAnnuityData
             'availableInStates' => ['CA', 'CO'],
             'surrenderSchedule' => [0.1, 0.09, 0.08],
             'isStructured' => false,
-            'flex_premiums_permitted' => 2,
+            'flex_premiums_permitted' => 1,
             'launch_date' => '2007-06-26',
             'purpose_text' => 'Lifetime Income',
             ...$override,
