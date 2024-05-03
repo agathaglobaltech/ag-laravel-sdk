@@ -16,6 +16,8 @@ class AccountData
         public readonly ?float $performanceTriggered,
         public readonly ?string $averaging,
         public readonly ?string $reset,
+        public readonly ?float $minPremium,
+        public readonly ?float $maxPremium,
     ) {
     }
 
@@ -33,6 +35,8 @@ class AccountData
             performanceTriggered: $accountData['actual_rate']['performance_triggered'],
             averaging: $accountData['averaging_label'] ?: null,
             reset: $accountData['reset_label'] ?: null,
+            minPremium: $accountData['min_premium'] ?: null,
+            maxPremium: $accountData['max_premium'] ?: null
         );
     }
 }
