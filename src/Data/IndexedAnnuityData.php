@@ -22,9 +22,9 @@ final class IndexedAnnuityData
         public readonly array $availableInStates,
         public readonly array $surrenderSchedule,
         public readonly bool $isStructured,
-        public readonly ?int $flexPremiumsPermitted,
-        public readonly ?string $launchDate,
-        public readonly ?string $purposeText
+        public readonly ?int $flexPremiumsPermitted = null,
+        public readonly ?string $launchDate = null,
+        public readonly ?string $purposeText = null
     ) {
     }
 
@@ -50,9 +50,9 @@ final class IndexedAnnuityData
             availableInStates: $incomingAnnuityData['available_in_states'] ?? [],
             surrenderSchedule: $incomingAnnuityData['surrender_schedule'] ?? [],
             isStructured: (bool) $incomingAnnuityData['is_structured'],
-            flexPremiumsPermitted: $incomingAnnuityData['flex_premiums_permitted'],
-            launchDate: $incomingAnnuityData['launch_date'],
-            purposeText: $incomingAnnuityData['purpose_text']
+            flexPremiumsPermitted: $incomingAnnuityData['flex_premiums_permitted'] ?? null,
+            launchDate: $incomingAnnuityData['launch_date'] ?? null,
+            purposeText: $incomingAnnuityData['purpose_text'] ?? null
         );
     }
 
@@ -73,9 +73,9 @@ final class IndexedAnnuityData
             'availableInStates' => ['CA', 'CO'],
             'surrenderSchedule' => [0.1, 0.09, 0.08],
             'isStructured' => false,
-            'flex_premiums_permitted' => 1,
-            'launch_date' => '2007-06-26',
-            'purpose_text' => 'Lifetime Income',
+            //'flex_premiums_permitted' => 1,
+            //'launch_date' => '2007-06-26',
+            //'purpose_text' => 'Lifetime Income',
             ...$override,
         ];
 
