@@ -2,6 +2,14 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.14 - 2024-05-08
+
+### What's Changed
+
+* bugfix by @ext4nt in https://github.com/agathaglobaltech/ag-laravel-sdk/pull/2
+
+**Full Changelog**: https://github.com/agathaglobaltech/ag-laravel-sdk/compare/v0.0.13...v0.0.14
+
 ## v0.0.13 - 2024-05-03
 
 ### What's Changed
