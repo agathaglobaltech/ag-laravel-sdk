@@ -2,6 +2,18 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.13 - 2024-05-03
+
+### What's Changed
+
+* new-fields-to-indexed by @ext4nt in https://github.com/agathaglobaltech/ag-laravel-sdk/pull/1
+
+### New Contributors
+
+* @ext4nt made their first contribution in https://github.com/agathaglobaltech/ag-laravel-sdk/pull/1
+
+**Full Changelog**: https://github.com/agathaglobaltech/ag-laravel-sdk/compare/v0.0.12...v0.0.13
+
 ## v0.0.12 - 2024-02-12
 
 - fix state type
