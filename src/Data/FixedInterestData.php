@@ -19,6 +19,8 @@ final class FixedInterestData
         public readonly array $availableStates,
         public readonly int $minPremium,
         public readonly int $maxPremium,
+        public readonly bool $mva,
+        public readonly bool $rop,
     ) {
     }
 
@@ -39,6 +41,8 @@ final class FixedInterestData
             availableStates: $incomingInterestData['available_in_states'],
             minPremium: $incomingInterestData['min_premium'],
             maxPremium: $incomingInterestData['max_premium'],
+            mva: $incomingInterestData['mva'],
+            rop: $incomingInterestData['rop'],
         );
     }
 

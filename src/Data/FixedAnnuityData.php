@@ -20,6 +20,11 @@ final class FixedAnnuityData
         public readonly bool $interestOnlyWithdrawal,
         public readonly bool $simpleGrowth,
         public readonly string $premiumType,
+        public readonly ?string $launchDate = null,
+        public readonly ?int $annuitantAgeQualifiedMin = null,
+        public readonly ?int $annuitantAgeQualifiedMax = null,
+        public readonly ?int $contributionMinimumInitialQualified = null,
+        public readonly ?int $contributionMaximum = null,
     ) {
         $this->interests = collect();
     }
@@ -47,6 +52,11 @@ final class FixedAnnuityData
             interestOnlyWithdrawal: $incomingAnnuityData['interest_only_withdrawal'],
             simpleGrowth: $incomingAnnuityData['simple_growth'],
             premiumType: $incomingAnnuityData['type_label'],
+            launchDate: $incomingAnnuityData['launch_date'] ?? null,
+            annuitantAgeQualifiedMin: $incomingAnnuityData['annuitant_age_qualified_min'] ?? null,
+            annuitantAgeQualifiedMax: $incomingAnnuityData['annuitant_age_qualified_max'] ?? null,
+            contributionMinimumInitialQualified: $incomingAnnuityData['contribution_minimum_initial_qualified'] ?? null,
+            contributionMaximum: $incomingAnnuityData['contribution_maximum'] ?? null,
         );
     }
 
