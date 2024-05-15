@@ -18,6 +18,10 @@ class AccountData
         public readonly ?string $reset,
         public readonly ?float $minPremium,
         public readonly ?float $maxPremium,
+        public readonly ?float $floor = null,
+        public readonly ?float $buffer = null,
+        public readonly ?float $downsideParticipationRate = null,
+        public readonly ?float $fee = null,
     ) {
     }
 
@@ -36,7 +40,11 @@ class AccountData
             averaging: $accountData['averaging_label'] ?: null,
             reset: $accountData['reset_label'] ?: null,
             minPremium: $accountData['min_premium'] ?: null,
-            maxPremium: $accountData['max_premium'] ?: null
+            maxPremium: $accountData['max_premium'] ?: null,
+            floor: $accountData['floor'] ?: null,
+            buffer: $accountData['buffer'] ?: null,
+            downsideParticipationRate: $accountData['downside_participation_rate'] ?: null,
+            fee: $accountData['fee'] ?: null,
         );
     }
 }

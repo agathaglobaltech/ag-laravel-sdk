@@ -24,7 +24,10 @@ final class IndexedAnnuityData
         public readonly bool $isStructured,
         public readonly ?int $flexPremiumsPermitted = null,
         public readonly ?string $launchDate = null,
-        public readonly ?string $purposeText = null
+        public readonly ?string $purposeText = null,
+        public readonly ?int $annuitantAgeQualifiedMax = null,
+        public readonly ?string $premiumNotes = null,
+        public readonly ?string $withdrawalProvisions = null,
     ) {
     }
 
@@ -52,7 +55,10 @@ final class IndexedAnnuityData
             isStructured: (bool) $incomingAnnuityData['is_structured'],
             flexPremiumsPermitted: $incomingAnnuityData['flex_premiums_permitted'] ?? null,
             launchDate: $incomingAnnuityData['launch_date'] ?? null,
-            purposeText: $incomingAnnuityData['purpose_text'] ?? null
+            purposeText: $incomingAnnuityData['purpose_text'] ?? null,
+            annuitantAgeQualifiedMax: $incomingAnnuityData['annuitant_age_qualified_max'] ?? null,
+            premiumNotes: $incomingAnnuityData['premium_notes'] ?? null,
+            withdrawalProvisions: $incomingAnnuityData['withdrawal_provisions'] ?? null,
         );
     }
 
