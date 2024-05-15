@@ -25,6 +25,7 @@ final class FixedAnnuityData
         public readonly ?int $annuitantAgeQualifiedMax = null,
         public readonly ?int $contributionMinimumInitialQualified = null,
         public readonly ?int $contributionMaximum = null,
+        public readonly ?array $waivers = null,
     ) {
         $this->interests = collect();
     }
@@ -57,6 +58,7 @@ final class FixedAnnuityData
             annuitantAgeQualifiedMax: $incomingAnnuityData['annuitant_age_qualified_max'] ?? null,
             contributionMinimumInitialQualified: $incomingAnnuityData['contribution_minimum_initial_qualified'] ?? null,
             contributionMaximum: $incomingAnnuityData['contribution_maximum'] ?? null,
+            waivers: $incomingAnnuityData['waivers'] ?? null,
         );
     }
 

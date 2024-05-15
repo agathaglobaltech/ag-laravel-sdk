@@ -28,6 +28,7 @@ final class IndexedAnnuityData
         public readonly ?int $annuitantAgeQualifiedMax = null,
         public readonly ?string $premiumNotes = null,
         public readonly ?string $withdrawalProvisions = null,
+        public readonly ?array $waivers = null,
     ) {
     }
 
@@ -59,6 +60,7 @@ final class IndexedAnnuityData
             annuitantAgeQualifiedMax: $incomingAnnuityData['annuitant_age_qualified_max'] ?? null,
             premiumNotes: $incomingAnnuityData['premium_notes'] ?? null,
             withdrawalProvisions: $incomingAnnuityData['withdrawal_provisions'] ?? null,
+            waivers: $incomingAnnuityData['waivers'] ?? null,
         );
     }
 
