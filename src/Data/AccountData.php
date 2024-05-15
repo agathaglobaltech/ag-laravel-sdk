@@ -41,10 +41,10 @@ class AccountData
             reset: $accountData['reset_label'] ?: null,
             minPremium: $accountData['min_premium'] ?: null,
             maxPremium: $accountData['max_premium'] ?: null,
-            floor: $accountData['floor'] ?: null,
-            buffer: $accountData['buffer'] ?: null,
-            downsideParticipationRate: $accountData['downside_participation_rate'] ?: null,
-            fee: $accountData['fee'] ?: null,
+            floor: $accountData['floor'] ?? null,
+            buffer: $accountData['buffer'] ?? null,
+            downsideParticipationRate: $accountData['downside_participation_rate'] ?? null,
+            fee: $accountData['fee'] ?? null,
         );
     }
 }
