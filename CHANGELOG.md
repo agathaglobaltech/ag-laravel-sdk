@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## Bugfix - 2024-05-16
+
+Bugfix
+
 ## v0.0.15 - 2024-05-15
 
 ### What's Changed
