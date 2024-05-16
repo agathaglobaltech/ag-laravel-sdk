@@ -68,6 +68,8 @@ final class FixedInterestData
             'availableStates' => ['CO', 'CA'],
             'minPremium' => 1000,
             'maxPremium' => 1_000_000,
+            'mva' => false,
+            'rop' => true,
             ...$override,
         ];
 
