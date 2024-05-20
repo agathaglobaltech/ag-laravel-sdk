@@ -32,7 +32,7 @@ class AccountData
             name: $accountData['name'],
             type: $accountData['type_label'],
             indexName: $accountData['index']['name'] ?? null,
-            fixedRate: $accountData['actual_rate']['fixed_rate'],
+            fixedRate: $accountData['actual_rate']['fixed_rate'] ?? null,
             participationRate: $accountData['actual_rate']['participation_rate'],
             cap: $accountData['actual_rate']['cap'],
             spread: $accountData['actual_rate']['spread'],
