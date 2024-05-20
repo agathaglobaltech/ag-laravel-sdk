@@ -36,7 +36,7 @@ class AccountData
             participationRate: $accountData['actual_rate']['participation_rate'] ?? null,
             cap: $accountData['actual_rate']['cap'] ?? null,
             spread: $accountData['actual_rate']['spread'] ?? null,
-            performanceTriggered: $accountData['actual_rate']['performance_triggered'],
+            performanceTriggered: $accountData['actual_rate']['performance_triggered'] ?? null,
             averaging: $accountData['averaging_label'] ?: null,
             reset: $accountData['reset_label'] ?: null,
             minPremium: $accountData['min_premium'] ?: null,
