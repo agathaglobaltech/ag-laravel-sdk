@@ -16,8 +16,8 @@ final class CarrierData
         public readonly ?string $ratingStandardAndPoors = null,
         public readonly ?string $ratingFitch = null,
         public readonly ?string $ratingMoodys = null,
-        public readonly ?string $ratingComdex = null,
         public readonly ?string $logoBigUrl = null,
+        public readonly ?string $ratingComdex = null,
         public readonly ?bool $published = null,
     ) {
     }
@@ -34,8 +34,8 @@ final class CarrierData
             ratingStandardAndPoors: $incomingCarrierData['rating_standard_poors_label'],
             ratingFitch: $incomingCarrierData['rating_fitch_label'],
             ratingMoodys: $incomingCarrierData['rating_moodys_label'],
-            ratingComdex: $incomingCarrierData['rating_comdex'],
             logoBigUrl: $incomingCarrierData['logo_big_url'],
+            ratingComdex: $incomingCarrierData['rating_comdex'],
             published: $incomingCarrierData['published'],
         );
     }
