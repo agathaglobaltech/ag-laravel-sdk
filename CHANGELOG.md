@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## New fields - 2024-05-22
+
+Comdex rating added, published field added.
+
 ## Bugfix - 2024-05-16
 
 Bugfix
