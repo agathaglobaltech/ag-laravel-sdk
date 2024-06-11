@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## Removed interest_only_withdrawal field - 2024-06-11
+
+Removed interest_only_withdrawal field
+
 ## New fields - 2024-05-22
 
 Comdex rating added, published field added.
