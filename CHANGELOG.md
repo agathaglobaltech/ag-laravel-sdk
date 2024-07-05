@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## Channels filter - 2024-07-05
+
+Channels filter
+
 ## Removed interest_only_withdrawal field - 2024-06-11
 
 Removed interest_only_withdrawal field
