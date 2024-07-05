@@ -7,8 +7,7 @@ class Revenue
     public function __construct(
         public readonly float $earnings,
         public readonly float $endingValue,
-    ) {
-    }
+    ) {}
 
     public static function fake()
     {

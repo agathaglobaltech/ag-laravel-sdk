@@ -11,8 +11,7 @@ class AnnuityInfo
         public readonly string $name,
         public readonly ?string $brochureUrl,
         public readonly ?int $parentId = null,
-    ) {
-    }
+    ) {}
 
     public static function fake(array $override = [])
     {

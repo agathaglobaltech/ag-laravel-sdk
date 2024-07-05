@@ -29,8 +29,7 @@ final class IndexedAnnuityData
         public readonly ?string $premiumNotes = null,
         public readonly ?string $withdrawalProvisions = null,
         public readonly ?array $waivers = null,
-    ) {
-    }
+    ) {}
 
     public static function parse(array $incomingAnnuityData)
     {

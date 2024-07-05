@@ -34,8 +34,7 @@ class AnnuitiesGenius implements AnnuitiesGeniusApi
     public function __construct(
         private readonly string $baseUrl,
         private readonly string $token
-    ) {
-    }
+    ) {}
 
     private function client()
     {

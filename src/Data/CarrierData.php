@@ -19,8 +19,7 @@ final class CarrierData
         public readonly ?string $logoBigUrl = null,
         public readonly ?string $ratingComdex = null,
         public readonly ?bool $published = null,
-    ) {
-    }
+    ) {}
 
     public static function parse(array $incomingCarrierData)
     {

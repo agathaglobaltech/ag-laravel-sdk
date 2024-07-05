@@ -15,8 +15,7 @@ class AccumulationParams implements Arrayable, CacheableParams
         public readonly int $age,
         public readonly string $state,
         public readonly bool $topPerCarrier = true,
-    ) {
-    }
+    ) {}
 
     public function toArray()
     {

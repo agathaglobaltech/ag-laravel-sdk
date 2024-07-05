@@ -19,8 +19,7 @@ class RiderData
         public readonly bool $hasEnhancedPayments,
         public readonly array $unavailableInStates,
         public readonly string $description,
-    ) {
-    }
+    ) {}
 
     public static function parse(array $incomingRiderData)
     {

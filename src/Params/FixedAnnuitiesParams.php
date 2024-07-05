@@ -15,8 +15,7 @@ class FixedAnnuitiesParams implements Arrayable, CacheableParams
         public readonly ?int $carrierId = null,
         public readonly ?int $withChannel = null,
         public readonly ?int $excludeChannel = null,
-    ) {
-    }
+    ) {}
 
     public function toArray()
     {
@@ -26,7 +25,7 @@ class FixedAnnuitiesParams implements Arrayable, CacheableParams
                 'carrier_id' => $this->carrierId,
             ],
             'with_channel' => $this->withChannel,
-            'exclude_channel' => $this->excludeChannel
+            'exclude_channel' => $this->excludeChannel,
         ];
     }
 }

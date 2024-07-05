@@ -24,8 +24,7 @@ class IncomeRiderCalculationParams implements Arrayable, CacheableParams
         public readonly ?int $deckId = null,
         public readonly string $strategy = 'no-decrease',
         public readonly string $levelOfDetail = 'top-for-carrier',
-    ) {
-    }
+    ) {}
 
     public function toArray()
     {

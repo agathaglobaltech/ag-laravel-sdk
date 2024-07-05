@@ -18,8 +18,7 @@ class DeathBenefitRiderCalculationParams implements CacheableParams
         private readonly DeathBenefitType $deathBenefitType,
         private readonly ?int $limit = null,
         private readonly string $levelOfDetail = 'top-for-carrier',
-    ) {
-    }
+    ) {}
 
     public function toArray()
     {

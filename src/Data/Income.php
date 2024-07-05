@@ -10,8 +10,7 @@ class Income
         public readonly float $guaranteedAnnualIncome,
         public readonly float $benefitBase,
         public readonly float $payoutRate,
-    ) {
-    }
+    ) {}
 
     public function guaranteedMonthlyIncome(): float
     {
