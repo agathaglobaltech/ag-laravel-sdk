@@ -14,8 +14,7 @@ class IncomeRiderCalculation
         public readonly RiderData $rider,
         public readonly IndexedAnnuityData $annuity,
         public readonly CarrierData $carrier,
-    ) {
-    }
+    ) {}
 
     public static function fake(): self
     {

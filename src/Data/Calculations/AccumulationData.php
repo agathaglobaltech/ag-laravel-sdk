@@ -14,6 +14,5 @@ class AccumulationData
         public readonly AccountData $account,
         public readonly IndexedAnnuityData $annuity,
         public readonly CarrierData $carrier,
-    ) {
-    }
+    ) {}
 }

@@ -20,8 +20,7 @@ class AnnuitiesGeniusCached implements AnnuitiesGeniusApi
     public function __construct(
         protected AnnuitiesGenius $annuitiesGeniusApi,
         protected int $cacheForHours = 24,
-    ) {
-    }
+    ) {}
 
     private function cached(string $method, array $args = [], ?CacheableParams $params = null)
     {

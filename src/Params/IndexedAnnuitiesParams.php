@@ -14,8 +14,9 @@ class IndexedAnnuitiesParams implements Arrayable, CacheableParams
         public readonly ?string $name = null,
         public readonly ?int $carrierId = null,
         public readonly bool $structured = false,
-    ) {
-    }
+        public readonly ?int $withChannel = null,
+        public readonly ?int $excludeChannel = null,
+    ) {}
 
     public function toArray()
     {
@@ -25,6 +26,8 @@ class IndexedAnnuitiesParams implements Arrayable, CacheableParams
                 'carrier_id' => $this->carrierId,
                 'is_structured' => $this->structured ? 1 : 0,
             ],
+            'with_channel' => $this->withChannel,
+            'exclude_channel' => $this->excludeChannel,
         ];
     }
 }

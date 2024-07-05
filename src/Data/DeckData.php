@@ -10,8 +10,7 @@ class DeckData
     public function __construct(
         public readonly int $id,
         public readonly string $name,
-    ) {
-    }
+    ) {}
 
     public static function fake(array $override = [])
     {

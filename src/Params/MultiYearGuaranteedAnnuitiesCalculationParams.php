@@ -15,8 +15,7 @@ class MultiYearGuaranteedAnnuitiesCalculationParams implements Arrayable, Cachea
         public readonly int $premium,
         public readonly string $state,
         public readonly array $guaranteedYears,
-    ) {
-    }
+    ) {}
 
     public function toArray()
     {

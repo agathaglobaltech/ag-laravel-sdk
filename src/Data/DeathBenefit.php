@@ -9,8 +9,7 @@ class DeathBenefit
     public function __construct(
         public readonly float $guaranteed,
         public readonly float $hypothetical
-    ) {
-    }
+    ) {}
 
     public static function fake(array $override = [])
     {

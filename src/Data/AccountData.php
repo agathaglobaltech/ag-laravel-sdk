@@ -22,8 +22,7 @@ class AccountData
         public readonly ?float $buffer = null,
         public readonly ?float $downsideParticipationRate = null,
         public readonly ?float $fee = null,
-    ) {
-    }
+    ) {}
 
     public static function parse(array $accountData)
     {

@@ -21,8 +21,7 @@ final class FixedInterestData
         public readonly int $maxPremium,
         public readonly bool $mva,
         public readonly bool $rop,
-    ) {
-    }
+    ) {}
 
     public static function parse(array $incomingInterestData)
     {

@@ -11,6 +11,5 @@ class Params implements CacheableParams
 
     public function __construct(
         protected readonly array $params
-    ) {
-    }
+    ) {}
 }
