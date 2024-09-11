@@ -71,6 +71,7 @@ final class FixedInterestData
             'maxPremium' => 1_000_000,
             'mva' => false,
             'rop' => true,
+            'productType' => 1,
             ...$override,
         ];
 
