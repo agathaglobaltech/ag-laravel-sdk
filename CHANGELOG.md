@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## Fake data for product type - 2024-09-11
+
+Fake data for product type
+
 ## Product type added for interests - 2024-09-11
 
 Product type added for interests
