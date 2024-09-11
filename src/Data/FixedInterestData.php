@@ -21,6 +21,7 @@ final class FixedInterestData
         public readonly int $maxPremium,
         public readonly bool $mva,
         public readonly bool $rop,
+        public readonly bool $productType,
     ) {}
 
     public static function parse(array $incomingInterestData)
@@ -42,6 +43,7 @@ final class FixedInterestData
             maxPremium: $incomingInterestData['max_premium'],
             mva: $incomingInterestData['mva'],
             rop: $incomingInterestData['rop'],
+            productType: $incomingInterestData['product_type'],
         );
     }
 
