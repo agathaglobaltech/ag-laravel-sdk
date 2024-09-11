@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## Product type added for interests - 2024-09-11
+
+Product type added for interests
+
 ## Channels filter - 2024-07-05
 
 Channels filter
