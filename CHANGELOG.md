@@ -2,6 +2,12 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.25 - 2024-11-06
+
+**Full Changelog**: https://github.com/agathaglobaltech/ag-laravel-sdk/compare/v0.0.24...v0.0.25
+
+- Support for Laravel 11
+
 ## Type fix - 2024-09-11
 
 Type fix
