@@ -2,6 +2,10 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## Remove qualified field - 2024-12-12
+
+Remove qualified field from FixedInterest
+
 ## v0.0.25 - 2024-11-06
 
 **Full Changelog**: https://github.com/agathaglobaltech/ag-laravel-sdk/compare/v0.0.24...v0.0.25
