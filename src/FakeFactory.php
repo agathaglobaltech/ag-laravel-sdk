@@ -11,4 +11,13 @@ class FakeFactory
             $afterDot
         );
     }
+
+    public static function randomElement(array $elements)
+    {
+        if (empty($elements)) {
+            throw new \InvalidArgumentException('Cannot pick a random element from an empty array.');
+        }
+
+        return $elements[array_rand($elements)];
+    }
 }
