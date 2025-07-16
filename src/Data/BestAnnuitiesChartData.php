@@ -3,7 +3,6 @@
 namespace AgathaGlobalTech\AnnuitiesGenius\Data;
 
 use AgathaGlobalTech\AnnuitiesGenius\FakeFactory;
-use Illuminate\Support\Arr;
 
 final class BestAnnuitiesChartData
 {
@@ -45,7 +44,7 @@ final class BestAnnuitiesChartData
             'chart' => [
                 'labels' => range(1, 10),
                 'data' => array_map(
-                    fn($i) => round(10000 + $i * FakeFactory::randomFloat(2, 50, 300), 2),
+                    fn ($i) => round(10000 + $i * FakeFactory::randomFloat(2, 50, 300), 2),
                     range(1, 10)
                 ),
             ],
