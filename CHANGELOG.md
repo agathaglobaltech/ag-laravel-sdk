@@ -2,6 +2,18 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.27 - 2025-07-17
+
+### What's Changed
+
+* Best annuity charts by @nighttima in https://github.com/agathaglobaltech/ag-laravel-sdk/pull/7
+
+### New Contributors
+
+* @nighttima made their first contribution in https://github.com/agathaglobaltech/ag-laravel-sdk/pull/7
+
+**Full Changelog**: https://github.com/agathaglobaltech/ag-laravel-sdk/compare/v0.0.26...v0.0.27
+
 ## Remove qualified field - 2024-12-12
 
 Remove qualified field from FixedInterest
