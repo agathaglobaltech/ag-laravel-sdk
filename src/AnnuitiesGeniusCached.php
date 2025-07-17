@@ -7,6 +7,7 @@ use AgathaGlobalTech\AnnuitiesGenius\Contracts\CacheableParams;
 use AgathaGlobalTech\AnnuitiesGenius\Data\UserInfo;
 use AgathaGlobalTech\AnnuitiesGenius\Enums\AnnuityType;
 use AgathaGlobalTech\AnnuitiesGenius\Params\AccumulationParams;
+use AgathaGlobalTech\AnnuitiesGenius\Params\BestAnnuitiesChartsParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\DeathBenefitRiderCalculationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\FixedAnnuitiesParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\IncomeRiderCalculationParams;
@@ -91,5 +92,10 @@ class AnnuitiesGeniusCached implements AnnuitiesGeniusApi
     public function fixedAnnuityInterests(int $annuityId): Collection
     {
         return $this->cached(__FUNCTION__, func_get_args(), new Params([$annuityId]));
+    }
+
+    public function bestAnnuitiesCharts(BestAnnuitiesChartsParams $params): Collection
+    {
+        return $this->cached(__FUNCTION__, func_get_args(), $params);
     }
 }

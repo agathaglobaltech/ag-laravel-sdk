@@ -5,6 +5,7 @@ namespace AgathaGlobalTech\AnnuitiesGenius;
 use AgathaGlobalTech\AnnuitiesGenius\Contracts\AnnuitiesGeniusApi;
 use AgathaGlobalTech\AnnuitiesGenius\Data\AccountData;
 use AgathaGlobalTech\AnnuitiesGenius\Data\Backtest;
+use AgathaGlobalTech\AnnuitiesGenius\Data\BestAnnuitiesChartData;
 use AgathaGlobalTech\AnnuitiesGenius\Data\Calculations\AccumulationData;
 use AgathaGlobalTech\AnnuitiesGenius\Data\Calculations\DeathBenefitRiderCalculation;
 use AgathaGlobalTech\AnnuitiesGenius\Data\Calculations\IncomeRiderCalculation;
@@ -21,6 +22,7 @@ use AgathaGlobalTech\AnnuitiesGenius\Data\RiderData;
 use AgathaGlobalTech\AnnuitiesGenius\Data\UserInfo;
 use AgathaGlobalTech\AnnuitiesGenius\Enums\AnnuityType;
 use AgathaGlobalTech\AnnuitiesGenius\Params\AccumulationParams;
+use AgathaGlobalTech\AnnuitiesGenius\Params\BestAnnuitiesChartsParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\DeathBenefitRiderCalculationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\FixedAnnuitiesParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\IncomeRiderCalculationParams;
@@ -234,5 +236,17 @@ class AnnuitiesGenius implements AnnuitiesGeniusApi
             ->throw()
             ->collect()
             ->map(fn ($interest) => FixedInterestData::parse($interest));
+    }
+
+    public function bestAnnuitiesCharts(BestAnnuitiesChartsParams $params): Collection
+    {
+        return $this
+            ->client()
+            ->post('best-annuities-charts', [...$params->toArray()])
+            ->throw()
+            ->collect()
+            ->map(fn ($chart, $key) => $chart !== null ? BestAnnuitiesChartData::parse($key, $chart) : null)
+            ->filter();
+
     }
 }

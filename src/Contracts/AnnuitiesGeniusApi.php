@@ -5,6 +5,7 @@ namespace AgathaGlobalTech\AnnuitiesGenius\Contracts;
 use AgathaGlobalTech\AnnuitiesGenius\Data\UserInfo;
 use AgathaGlobalTech\AnnuitiesGenius\Enums\AnnuityType;
 use AgathaGlobalTech\AnnuitiesGenius\Params\AccumulationParams;
+use AgathaGlobalTech\AnnuitiesGenius\Params\BestAnnuitiesChartsParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\DeathBenefitRiderCalculationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\FixedAnnuitiesParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\IncomeRiderCalculationParams;
@@ -70,4 +71,9 @@ interface AnnuitiesGeniusApi
      * @returns Collection<\AgathaGlobalTech\AnnuitiesGenius\Data\FixedInterestData, int>
      */
     public function fixedAnnuityInterests(int $annuityId): Collection;
+
+    /**
+     * @returns Collection<\AgathaGlobalTech\AnnuitiesGenius\Data\BestAnnuitiesChartData, int>
+     */
+    public function bestAnnuitiesCharts(BestAnnuitiesChartsParams $params): Collection;
 }
