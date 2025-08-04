@@ -255,7 +255,7 @@ class AnnuitiesGenius implements AnnuitiesGeniusApi
     {
         $client = $this
             ->client()
-            ->post('create-client', [...$params->toArray()])
+            ->post('clients', [...$params->toArray()])
             ->throw()
             ->object();
 
