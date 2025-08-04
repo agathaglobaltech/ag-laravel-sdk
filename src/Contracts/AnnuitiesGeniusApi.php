@@ -79,8 +79,5 @@ interface AnnuitiesGeniusApi
      */
     public function bestAnnuitiesCharts(BestAnnuitiesChartsParams $params): Collection;
 
-    /**
-     * @return \AgathaGlobalTech\AnnuitiesGenius\Data\ClientInfo
-     */
     public function createClient(ClientParams $params): ClientInfo;
 }
