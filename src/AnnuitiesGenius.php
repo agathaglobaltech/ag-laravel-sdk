@@ -11,6 +11,7 @@ use AgathaGlobalTech\AnnuitiesGenius\Data\Calculations\DeathBenefitRiderCalculat
 use AgathaGlobalTech\AnnuitiesGenius\Data\Calculations\IncomeRiderCalculation;
 use AgathaGlobalTech\AnnuitiesGenius\Data\Calculations\MultiYearGuaranteedAnnuityCalculation;
 use AgathaGlobalTech\AnnuitiesGenius\Data\CarrierData;
+use AgathaGlobalTech\AnnuitiesGenius\Data\ClientInfo;
 use AgathaGlobalTech\AnnuitiesGenius\Data\DeathBenefit;
 use AgathaGlobalTech\AnnuitiesGenius\Data\DeckData;
 use AgathaGlobalTech\AnnuitiesGenius\Data\FixedAnnuityData;
@@ -23,6 +24,7 @@ use AgathaGlobalTech\AnnuitiesGenius\Data\UserInfo;
 use AgathaGlobalTech\AnnuitiesGenius\Enums\AnnuityType;
 use AgathaGlobalTech\AnnuitiesGenius\Params\AccumulationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\BestAnnuitiesChartsParams;
+use AgathaGlobalTech\AnnuitiesGenius\Params\ClientParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\DeathBenefitRiderCalculationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\FixedAnnuitiesParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\IncomeRiderCalculationParams;
@@ -36,7 +38,8 @@ class AnnuitiesGenius implements AnnuitiesGeniusApi
     public function __construct(
         private readonly string $baseUrl,
         private readonly string $token
-    ) {}
+    ) {
+    }
 
     private function client()
     {
@@ -247,6 +250,18 @@ class AnnuitiesGenius implements AnnuitiesGeniusApi
             ->collect()
             ->map(fn ($chart, $key) => $chart !== null ? BestAnnuitiesChartData::parse($key, $chart) : null)
             ->filter();
+    }
 
+    public function createClient(ClientParams $params): ClientInfo
+    {
+        $client = $this
+            ->client()
+            ->post('create-client', [...$params->toArray()])
+            ->throw()
+            ->object();
+
+        return new ClientInfo(
+            clientId: $client->client_id
+        );
     }
 }
