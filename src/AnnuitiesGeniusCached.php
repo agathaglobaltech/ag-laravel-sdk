@@ -4,10 +4,12 @@ namespace AgathaGlobalTech\AnnuitiesGenius;
 
 use AgathaGlobalTech\AnnuitiesGenius\Contracts\AnnuitiesGeniusApi;
 use AgathaGlobalTech\AnnuitiesGenius\Contracts\CacheableParams;
+use AgathaGlobalTech\AnnuitiesGenius\Data\ClientInfo;
 use AgathaGlobalTech\AnnuitiesGenius\Data\UserInfo;
 use AgathaGlobalTech\AnnuitiesGenius\Enums\AnnuityType;
 use AgathaGlobalTech\AnnuitiesGenius\Params\AccumulationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\BestAnnuitiesChartsParams;
+use AgathaGlobalTech\AnnuitiesGenius\Params\ClientParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\DeathBenefitRiderCalculationParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\FixedAnnuitiesParams;
 use AgathaGlobalTech\AnnuitiesGenius\Params\IncomeRiderCalculationParams;
@@ -97,5 +99,10 @@ class AnnuitiesGeniusCached implements AnnuitiesGeniusApi
     public function bestAnnuitiesCharts(BestAnnuitiesChartsParams $params): Collection
     {
         return $this->cached(__FUNCTION__, func_get_args(), $params);
+    }
+
+    public function createClient(ClientParams $params): ClientInfo
+    {
+        return $this->annuitiesGeniusApi->createClient($params);
     }
 }
