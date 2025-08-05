@@ -2,6 +2,14 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.28 - 2025-08-05
+
+### What's Changed
+
+* client-endpoint-created by @ext4nt in https://github.com/agathaglobaltech/ag-laravel-sdk/pull/8
+
+**Full Changelog**: https://github.com/agathaglobaltech/ag-laravel-sdk/compare/v0.0.27...v0.0.28
+
 ## v0.0.27 - 2025-07-17
 
 ### What's Changed
