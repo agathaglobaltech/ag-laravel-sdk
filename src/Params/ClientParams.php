@@ -5,7 +5,6 @@ namespace AgathaGlobalTech\AnnuitiesGenius\Params;
 use AgathaGlobalTech\AnnuitiesGenius\Concerns\WithUniqueKey;
 use AgathaGlobalTech\AnnuitiesGenius\Contracts\CacheableParams;
 use AgathaGlobalTech\AnnuitiesGenius\Enums\Gender;
-use App\Enums\ClientSourceEnum;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Carbon;
 
@@ -15,7 +14,7 @@ class ClientParams implements Arrayable, CacheableParams
 
     public function __construct(
         public readonly string $name,
-        public readonly ClientSourceEnum $source,
+        public readonly string $source,
         public readonly string $state,
         public readonly int $age,
         public readonly ?int $initialInvestment = null,
@@ -44,7 +43,7 @@ class ClientParams implements Arrayable, CacheableParams
             'age' => $this->age,
             'validated_phone_at' => $this->validatedPhoneAt?->toDateTimeString(),
             'start_income_at_age' => $this->startIncomeAtAge,
-            'source' => $this->source->value,
+            'source' => $this->source,
             'spouse_name' => $this->spouseName,
             'spouse_date_of_birth' => $this->spouseDateOfBirth?->toDateString(),
             'spouse_age' => $this->spouseAge,
