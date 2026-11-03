@@ -2,6 +2,18 @@
 
 All notable changes to `ag-laravel-sdk` will be documented in this file.
 
+## v0.0.29 - 2026-11-03
+
+### What's Changed
+
+* Allow Laravel 12 and 13 by @satoved in https://github.com/agathaglobaltech/ag-laravel-sdk/pull/9
+
+### New Contributors
+
+* @satoved made their first contribution in https://github.com/agathaglobaltech/ag-laravel-sdk/pull/9
+
+**Full Changelog**: https://github.com/agathaglobaltech/ag-laravel-sdk/compare/v0.0.28...v0.0.29
+
 ## v0.0.28 - 2025-08-05
 
 ### What's Changed
